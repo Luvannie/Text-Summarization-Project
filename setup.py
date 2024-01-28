@@ -16,7 +16,7 @@ setuptools.setup(
     author_email=AUTHOR_EMAIL,
     description="a project about Text Summarization  i learn from Youtube",
     long_description= long_description,
-    long_description_content = "text/markdown",
+    # long_description_content = "text/markdown",
     url = f"https://github.com/Luvannie/Text-Summarization-Project",
     project_urls= {
         "Bug tracker": f"https://github.com/Luvannie/Text-Summarization-Project/issues",
