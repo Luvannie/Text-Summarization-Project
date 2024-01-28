@@ -8,7 +8,7 @@ from typing import Any
 from pathlib import Path
 
 @ensure_annotations
-def read_yaml(path_to_yaml:Path) -> config_box:
+def read_yaml(path_to_yaml:Path) -> ConfigBox:
     """
     reads yaml file and returns
     Args:
