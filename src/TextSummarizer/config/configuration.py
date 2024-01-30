@@ -4,6 +4,7 @@ from TextSummarizer.entity.__init__ import DataIngestionConfig
 from TextSummarizer.entity.__init__ import DataValidationConfig
 from TextSummarizer.entity.__init__ import DataTransformationConfig
 from TextSummarizer.entity.__init__ import ModelTrainerConfig
+from TextSummarizer.entity.__init__ import ModelEvaluationConfig
 class ConfigurationManager:
     def __init__(
         self,
@@ -77,3 +78,18 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+            model_path = config.model_path,
+            tokenizer_path = config.tokenizer_path,
+            metric_file_name = config.metric_file_name
+           
+        )
+
+        return model_evaluation_config
